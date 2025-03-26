@@ -1,63 +1,173 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-us">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Name</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="theme" content="hugo-academic">
+  <meta name="author" content="Mark Vecchione">
+  
+  <meta name="description" content="Senior Managing Consultant">
+
+  <link rel="alternate" hreflang="en-us" href="http://yourdomain.com/">
+
+  <meta name="theme-color" content="#0095eb">
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha512-6MXa8B6uaO18Hid6blRMetEIoPqHf7Ux1tnyIQdpt9qI5OACx7C+O3IVTr98vwGnlcg0LOLa02i9Y1HpVhlfiw==" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha512-SfTiTlX6kk+qitfevl/7LibUOeJWlt9rbyDn92a1DqWOw9vWG2MFoays0sgObmWazO5BQPiFucnnEAjpAB+/Sw==" crossorigin="anonymous">
+  
+  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Montserrat:400,700%7cRoboto:400,400italic,700%7cRoboto&#43;Mono">
+  
+  <link rel="stylesheet" href="styles.css">
+  
+  <!-- Remove icon references for now until we set up webpack to handle them -->
+  
+  <title>Mark Vecchione</title>
 </head>
-<body>
-    <div class="container">
-        <header>
-            <h1>Mark Vecchione</h1>
-            <p class="subtitle">Senior Managing Consultant</p>
-            
-            <nav>
-                <a href="index.html" class="active">Home</a>
-                <a href="projects.html">Projects</a>
-                <a href="cv.html">CV</a>
-            </nav>
-        </header>
-        
-        <main>
-            <section class="section">
-                <div class="profile-summary">
-                    <p class="intro-paragraph">
-                        put intro paragraph here
-                    </p>
-                </div>
-                
-                <div class="interests">
-                    <h2>Interests</h2>
-                    <ul>
-                        <li>Organizational Design</li>
-                        <li>Process Optimization</li>
-                        <li>Application Development</li>
-                        <li>Science Fiction</li>
-                        <li>Cooking</li>
-                    </ul>
-                </div>
-                
-                <div class="background">
-                    <h2>Background</h2>
-                    <p>
-                        insert background
-                    </p>
-                    <p>
-                        My educational background includes a Bachelor's degree in Business Administration from Villanova University. insert rest of paragraph.
-                    </p>
-                </div>
-            </section>
-        </main>
-        
-        <footer>
-            <div class="social-links">
-                <a href="https://github.com/mark-vecchione" target="_blank">GitHub</a>
-                <a href="https://www.linkedin.com/in/mark-f-vecchione/" target="_blank">LinkedIn</a>
-            </div>
-        </footer>
+
+<body id="top" data-spy="scroll" data-target="#navbar-main" data-offset="71">
+
+<nav class="navbar navbar-default navbar-fixed-top" id="navbar-main">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+              data-target=".navbar-collapse" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/">Mark Vecchione</a>
     </div>
 
-    <script src="website.js"></script>
+    <div class="collapse navbar-collapse">
+      <ul class="nav navbar-nav navbar-right">
+        <li class="nav-item">
+          <a href="#about" data-target="#about">
+            <span>Home</span>
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a href="projects.html" data-target="projects.html">
+            <span>Projects</span>
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a href="cv.html" data-target="cv.html">
+            <span>CV</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<span id="homepage" style="display: none"></span>
+
+<section id="about" class="home-section">
+  <div class="container">
+    <div class="row" itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <div class="col-xs-12 col-md-4">
+        <div id="profile">
+          <!-- We'll handle the image with JS to avoid webpack issues -->
+          <div class="portrait" id="profile-image"></div>
+          
+          <div class="portrait-title">
+            <h2 itemprop="name">Mark Vecchione</h2>
+            <h3 itemprop="jobTitle">Senior Managing Consultant</h3>
+            
+            <h3 itemprop="worksFor" itemscope itemtype="http://schema.org/Organization">
+              <span itemprop="name">Reference Point</span>
+            </h3>
+          </div>
+
+          <ul class="network-icon" aria-hidden="true">
+            <li>
+              <a itemprop="sameAs" href="mailto:your.email@example.com" target="_blank" rel="noopener">
+                <i class="fa fa-envelope big-icon"></i>
+              </a>
+            </li>
+            
+            <li>
+              <a itemprop="sameAs" href="//linkedin.com/in/mark-f-vecchione/" target="_blank" rel="noopener">
+                <i class="fa fa-linkedin big-icon"></i>
+              </a>
+            </li>
+            
+            <li>
+              <a itemprop="sameAs" href="//github.com/mark-vecchione" target="_blank" rel="noopener">
+                <i class="fa fa-github big-icon"></i>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="col-xs-12 col-md-8" itemprop="description">
+        <h1 id="biography">Biography</h1>
+        
+        <p class="intro-paragraph">
+          Put your intro paragraph here. This is where you can introduce yourself and provide a brief overview of your professional background and expertise.
+        </p>
+
+        <p>
+          Add more background information here. Describe your career journey, your approach to work, and what makes you unique in your field.
+        </p>
+
+        <div class="row">
+          <div class="col-sm-5">
+            <h3>Interests</h3>
+            <ul class="ul-interests">
+              <li>Organizational Design</li>
+              <li>Process Optimization</li>
+              <li>Application Development</li>
+              <li>Science Fiction</li>
+              <li>Cooking</li>
+            </ul>
+          </div>
+          
+          <div class="col-sm-7">
+            <h3>Education</h3>
+            <ul class="ul-edu fa-ul">
+              <li>
+                <i class="fa-li fa fa-graduation-cap"></i>
+                <div class="description">
+                  <p class="course">Bachelor's degree in Business Administration, 2008-2012</p>
+                  <p class="institution">Villanova University</p>
+                </div>
+              </li>
+              
+              <!-- You can add more education items here -->
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <p class="powered-by">
+      &copy; 2025 Mark Vecchione &middot; All rights reserved.
+      
+      <span class="pull-right" aria-hidden="true">
+        <a href="#" id="back_to_top">
+          <span class="button_icon">
+            <i class="fa fa-chevron-up fa-2x"></i>
+          </span>
+        </a>
+      </span>
+    </p>
+  </div>
+</footer>
+
+<!-- Scripts -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js" integrity="sha512-3P8rXCuGJdNZOnUx/03c1jOTnMn3rP63nBip5gOP2qmUh5YAdVAvFZ1E+QLZZbC1rtMrQb+mah3AfYW11RUrWA==" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha512-iztkobsvnjKfAtTNdHkGVjAYTrrtlC7mGp/54c40wowO7LhURYl3gVzzcEqGl/qKXQltJ2HwMrdLcNUdo+N/RQ==" crossorigin="anonymous"></script>
+<script src="website.js"></script>
+
 </body>
 </html>
