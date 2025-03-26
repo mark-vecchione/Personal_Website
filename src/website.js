@@ -10,8 +10,7 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 /**
- * Updates navigation based on current page and adds interaction effects
- */
+ * Updates navigation based on current page and adds interaction effects */
 function initNavigation() {
     // Get all navigation links
     const navLinks = document.querySelectorAll('nav a');
@@ -48,7 +47,7 @@ function initNavigation() {
  */
 function initSectionAnimations() {
     // Get all section elements
-    const sections = document.querySelectorAll('.section');
+    const sections = document.querySelectorAll('.home-section');
     
     // Create intersection observer to detect when elements enter viewport
     const observer = new IntersectionObserver((entries) => {
@@ -71,49 +70,3 @@ function initSectionAnimations() {
         observer.observe(section);
     });
 }
-
-/**
- * Utility function to create and manage a simple typewriter effect
- * Usage: typeText(element, text, speed)
- */
-function typeText(element, text, speed = 50) {
-    let i = 0;
-    element.textContent = '';
-    
-    function typing() {
-        if (i < text.length) {
-            element.textContent += text.charAt(i);
-            i++;
-            setTimeout(typing, speed);
-        }
-    }
-    
-    typing();
-}
-
-/**
- * Example implementation of a dark mode toggle
- * This function can be connected to a button or UI element
- */
-function toggleDarkMode() {
-    const body = document.body;
-    body.classList.toggle('dark-mode');
-    
-    // Store user preference
-    const isDarkMode = body.classList.contains('dark-mode');
-    localStorage.setItem('darkMode', isDarkMode);
-}
-
-/**
- * Check if user has previously enabled dark mode and apply it
- */
-function checkDarkModePreference() {
-    const savedDarkMode = localStorage.getItem('darkMode');
-    
-    if (savedDarkMode === 'true') {
-        document.body.classList.add('dark-mode');
-    }
-}
-
-// Export public functions for use in other scripts
-export { typeText, toggleDarkMode };
